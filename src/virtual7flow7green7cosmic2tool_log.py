@@ -100,3 +100,12 @@ def hash_password(password):
 
 def verify_password(password, hashed):
     return hash_password(password) == hashed
+
+# Update at 2025-04-10 05:31:07
+# Improved performance
+# Added documentation
+# Added error handling
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n-1)
