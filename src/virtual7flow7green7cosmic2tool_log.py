@@ -155,3 +155,17 @@ def binary_search(arr, target):
         else:
             right = mid - 1
     return -1
+
+# Update at 2025-04-13 15:21:11
+# Added unit tests
+# This is a random comment
+
+from datetime import datetime, timedelta
+
+def get_date_range(start_date, end_date):
+    date_list = []
+    current_date = start_date
+    while current_date <= end_date:
+        date_list.append(current_date)
+        current_date += timedelta(days=1)
+    return date_list
