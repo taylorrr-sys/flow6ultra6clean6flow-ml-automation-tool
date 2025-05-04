@@ -495,3 +495,16 @@ def count_words(text):
     for word in words:
         word_count[word] = word_count.get(word, 0) + 1
     return word_count
+
+# Update at 2025-05-04 14:24:04
+# This is a random comment
+
+import re
+
+def validate_email(email):
+    pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
+    return bool(re.match(pattern, email))
+
+def extract_phone_numbers(text):
+    pattern = r'\d{3}-\d{3}-\d{4}'
+    return re.findall(pattern, text)
