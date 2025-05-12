@@ -617,3 +617,16 @@ def bubble_sort(arr):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
+
+# Update at 2025-05-12 12:46:10
+# This is a random comment
+
+
+import hashlib
+
+def hash_password(password):
+    salt = "random_salt"
+    return hashlib.sha256((password + salt).encode()).hexdigest()
+
+def verify_password(password, hashed):
+    return hash_password(password) == hashed
