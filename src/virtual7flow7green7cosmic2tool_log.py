@@ -758,3 +758,18 @@ class LinkedList:
         while current.next:
             current = current.next
         current.next = new_node
+
+# Update at 2025-05-19 05:25:07
+# Updated the code with new features
+# Added some random functionality
+
+
+import json
+
+def save_to_json(data, filename):
+    with open(filename, 'w') as f:
+        json.dump(data, f, indent=4)
+
+def load_from_json(filename):
+    with open(filename, 'r') as f:
+        return json.load(f)
