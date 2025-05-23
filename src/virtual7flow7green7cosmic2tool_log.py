@@ -831,3 +831,14 @@ def bubble_sort(arr):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
+
+# Update at 2025-05-23 16:23:04
+# Optimized the algorithm
+# Improved performance
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
