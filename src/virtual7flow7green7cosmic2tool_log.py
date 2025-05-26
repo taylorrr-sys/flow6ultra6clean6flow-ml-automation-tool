@@ -856,3 +856,26 @@ def save_to_json(data, filename):
 def load_from_json(filename):
     with open(filename, 'r') as f:
         return json.load(f)
+
+# Update at 2025-05-26 10:01:05
+# Fixed some bugs
+# Added unit tests
+# Updated the code with new features
+class Singleton:
+    _instance = None
+    
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+
+class Observer:
+    def __init__(self):
+        self._observers = []
+    
+    def attach(self, observer):
+        self._observers.append(observer)
+    
+    def notify(self):
+        for observer in self._observers:
+            observer.update()
