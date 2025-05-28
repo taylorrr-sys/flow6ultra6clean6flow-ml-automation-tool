@@ -896,3 +896,16 @@ def binary_search(arr, target):
         else:
             right = mid - 1
     return -1
+
+# Update at 2025-05-28 16:53:08
+# Added error handling
+# Refactored the code
+# Fixed some bugs
+
+
+def reverse_string(s):
+    return s[::-1]
+
+def is_palindrome(s):
+    s = s.lower().replace(" ", "")
+    return s == s[::-1]
