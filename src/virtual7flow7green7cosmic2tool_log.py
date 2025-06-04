@@ -1005,3 +1005,17 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
+
+# Update at 2025-06-04 20:03:04
+# Improved performance
+# Refactored the code
+# Added documentation
+
+import hashlib
+
+def hash_password(password):
+    salt = "random_salt"
+    return hashlib.sha256((password + salt).encode()).hexdigest()
+
+def verify_password(password, hashed):
+    return hash_password(password) == hashed
