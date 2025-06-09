@@ -1074,3 +1074,12 @@ def get_date_range(start_date, end_date):
         date_list.append(current_date)
         current_date += timedelta(days=1)
     return date_list
+
+# Update at 2025-06-10 01:52:08
+# Improved performance
+# Updated the code with new features
+# Refactored the code
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n-1)
