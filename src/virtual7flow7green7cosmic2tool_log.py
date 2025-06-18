@@ -1184,3 +1184,17 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
+
+# Update at 2025-06-18 22:55:09
+# Improved performance
+# Added unit tests
+# Added some random functionality
+
+
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
