@@ -1321,3 +1321,16 @@ async def fetch_data_async(url):
 async def process_multiple_urls(urls):
     tasks = [fetch_data_async(url) for url in urls]
     return await asyncio.gather(*tasks)
+
+# Update at 2025-10-09 14:23:10
+# Refactored the code
+import requests
+
+def fetch_data(url):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        return response.json()
+    except requests.RequestException as e:
+        print(f"Error fetching data: {e}")
+        return None
