@@ -1434,3 +1434,17 @@ class Stack:
     
     def is_empty(self):
         return len(self.items) == 0
+
+# Update at 2025-10-15 17:14:09
+# Updated the code with new features
+# Added some random functionality
+# Added documentation
+
+
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
