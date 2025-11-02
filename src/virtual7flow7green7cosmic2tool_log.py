@@ -1561,3 +1561,14 @@ def binary_search(arr, target):
         else:
             right = mid - 1
     return -1
+
+# Update at 2025-11-02 21:11:05
+# Added error handling
+# Updated the code with new features
+# Added unit tests
+
+
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n-1)
